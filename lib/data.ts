@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import chatApp from "@/public/Chat-app.jpg";
-import dex from "@/public/DEX.jpg";
-import supply_chain from "@/public/Supply-chain.jpg";
+import Aidea from "@/public/Ai_saas.png";
+import olympicData from "@/public/olympic.png";
+import echoextractor from "@/public/echoextractor.png";
 
 export const links = [
   {
@@ -62,25 +62,53 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "ChatMate: A Modern Chat Application",
+    title: "AIdea",
     description:
-      "I developed ChatMate, a state-of-the-art chat application that combines the power of modern web technologies to deliver a seamless messaging experience. The frontend boasts dynamic animations and transitions using Framer Motion, complemented by custom styling with CSS. The backend, powered by Node.js and Express, integrates with MongoDB Atlas for reliable data management.",
-    tags: ["JavaScript", "React", "Node", "Express", "MongoDB Atlas", "React Router", "Axios", "Bcrypt", "Socket.io", "Redux", "Framer Motion", "CSS"],
-    imageUrl: chatApp,
+      "AIdea is an AI-powered platform that simplifies content creation. Generate images,videos,code,conversations,and more using the latest AI technology. ",
+    tags: [
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "MySQL",
+      "Prisma",
+      "Stripe",
+      "Crisp",
+      "Zod",
+    ],
+    imageUrl: Aidea,
+    link: "https://aidea-sable.vercel.app/",
   },
   {
-    title: "Supply-chain",
+    title: "Echo Extractor",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: supply_chain,
+      "EchoExtractor automates Amazon price tracking. Get instant alerts when prices change on your desired products.",
+    tags: [
+      "Next.js",
+      "Bright Data",
+      "Cheerio",
+      "Nodemailer",
+      "MongoDB",
+      "Headless UI",
+      "Tailwind CSS",
+    ],
+    imageUrl: echoextractor,
+    link: "https://echo-extractor.vercel.app/",
   },
   {
-    title: "DEX",
+    title: "Olympics Data Analysis",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: dex,
+      "Uncovered hidden trends in historical Olympics data. Improved dataset accuracy by 20% using Python, then created interactive visualizations for in-depth analysis.",
+    tags: [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "Streamlit",
+    ],
+    imageUrl: olympicData,
+    link: "https://data-behind-the-glory.streamlit.app/",
   },
 ] as const;
 
@@ -102,8 +130,5 @@ export const skillsData = [
   "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
 ] as const;
-
-

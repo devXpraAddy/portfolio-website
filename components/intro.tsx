@@ -1,76 +1,86 @@
 "use client";
 
-import React from 'react'
-import Image from 'next/image'
-import profile from '@/public/portfolio.jpg';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { BsArrowRight, BsLinkedin } from "react-icons/bs"
+import React from "react";
+import Image from "next/image";
+import profile from "@/public/portfolio.jpg";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from 'react-icons/fa';
-import { useSectionInView } from '@/lib/hooks';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
-   
-    const { ref } =  useSectionInView("Home",0.5);
-    const {
-      setactiveSection,
-      setTimeOfLastClick,
-    }  = useActiveSectionContext();
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setactiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-//   const {ref, inView} = useInView({
-//     threshold: 0.5,
-//   });  // inView tell us the current state
+  //   const {ref, inView} = useInView({
+  //     threshold: 0.5,
+  //   });  // inView tell us the current state
   // const { setactiveSection , timeOfLastClick} = useActiveSectionContext();
 
-//   useEffect(() => {
-//   if(inView  && Date.now() - timeOfLastClick > 1000) {
-//     setactiveSection("Home");
-//   }
-// }, [inView, setactiveSection, timeOfLastClick]);
-
-
+  //   useEffect(() => {
+  //   if(inView  && Date.now() - timeOfLastClick > 1000) {
+  //     setactiveSection("Home");
+  //   }
+  // }, [inView, setactiveSection, timeOfLastClick]);
 
   return (
-    <section ref={ref} id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28'>
-        <div className="flex items-center justify-center">
-            <div className='relative'>
-                <motion.div
-                initial={{opacity: 0, scale: 0}}
-                animate={{opacity: 1, scale: 1}}
-                transition={{
-                    type: "tween",
-                    duration: 0.2,
-                }}
-                >
-                <Image src={profile} alt="Aditya Portfolio" width="192" height="192" quality="95" priority={true} className='h-24 w-24 rounded-full border-[0.35rem] border-white'/>
-                </motion.div>
-                <motion.span className="absolute bottom-0 right-0 text-4xl"
-                initial={{opacity: 0, scale: 0}}
-                animate={{opacity: 1, scale: 1}}
-                transition={{
-                    type: "spring",
-                    stiffness: 125,
-                    delay: 0.1,
-                    duration: 0.7,
-                }}
-                >
-                    👋
-                </motion.span>
-            </div>
+    <section
+      ref={ref}
+      id="home"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28"
+    >
+      <div className="flex items-center justify-center">
+        <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "tween",
+              duration: 0.2,
+            }}
+          >
+            <Image
+              src={profile}
+              alt="Aditya Portfolio"
+              width="192"
+              height="192"
+              quality="95"
+              priority={true}
+              className="h-24 w-24 rounded-full border-[0.35rem] border-white"
+            />
+          </motion.div>
+          <motion.span
+            className="absolute bottom-0 right-0 text-4xl"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 125,
+              delay: 0.1,
+              duration: 0.7,
+            }}
+          >
+            👋
+          </motion.span>
         </div>
+      </div>
 
-        <motion.h1
+      <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Aditya Prajapati</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with hand-on experiance {" "}
-        <span className="font-bold">with Blockchain technology</span>. I enjoy
-        solving <span className="italic">real-life problems</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">Hello, I&apos;m Aditya Prajapati</span>{" "}
+        I&apos;m a <span className="font-bold">full-stack developer</span>{" "}
+        experienced in{" "}
+        <span className="font-bold">
+          modern front-end and back-end technologies
+        </span>
+        ,with a focus on <span className="italic">problem-solving </span>to
+        deliver <span className="font-bold">robust </span>solutions.
       </motion.h1>
 
       <motion.div
@@ -104,7 +114,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/aditya-k-8ba208218/"
           target="_blank"
         >
           <BsLinkedin />
@@ -112,14 +122,13 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="
+          https://github.com/devXpraAddy"
           target="_blank"
         >
           <FaGithubSquare />
         </a>
       </motion.div>
     </section>
-  )
+  );
 }
-
-
