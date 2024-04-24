@@ -32,7 +32,7 @@ export default function About() {
       <p className="mb-3">
         {" "}
         <span className="font-medium">
-          I'm a driven Information Technology major at Kalinga Institute of
+          I&apos;m a driven Information Technology major at Kalinga Institute of
           Industrial Technology, with a strong grasp of data structures and
           algorithms. My passion for software development lies in tackling
           real-world challenges and finding solutions that make a difference. My
@@ -43,8 +43,8 @@ export default function About() {
 
       <p>
         <span>
-          I'm a lifelong learner, always eager to explore new technologies. I'm
-          currently seeking an opportunity to apply my skills and make
+          I&apos;m a lifelong learner, always eager to explore new technologies.
+          I&apos;m currently seeking an opportunity to apply my skills and make
           meaningful contributions within a full-time software developer
           position.
         </span>
